@@ -9,7 +9,7 @@ FeatureLogging.TraceLogger += (sender, s) => Console.WriteLine("TRACE: " + s + "
 FeatureLogging.InfoLogger += (sender, s) => Console.WriteLine("INFO: " + s + "\n"); 
 FeatureLogging.ErrorLogger += (sender, s) => Console.WriteLine("ERROR: " + s + "\n");
 
-var config = new EdgeFeatureHubConfig("http://localhost:8085", "2b999acc-31ea-4ca0-96bc-e1a07045d1fb/f5LoYQIH5ST3D9FHd92WbnRmIg3oiJBE70i2NDOZ");
+var config = new EdgeFeatureHubConfig("http://featurehub:8085", "2b999acc-31ea-4ca0-96bc-e1a07045d1fb/f5LoYQIH5ST3D9FHd92WbnRmIg3oiJBE70i2NDOZ");
 
 // All values are captured on build and not automatically updated, but changes can be streamed afterwards
 var fh = await config.NewContext()
